@@ -33,19 +33,24 @@ export default class Nav extends Component {
                 <Link className="nav-link" to="/pokemon">
                   Pokemon
                 </Link>
+              <li className="nav-item">
+                <Link className="nav-link" to="/Pricing">
+                    Pricing
+                </Link>
               </li>
               <li className="nav-item">
                 <Link className="nav-link" to="/SignIn">
-                  SignIn
+                    SignIn
                 </Link>
               </li>
               <li className="nav-item">
                 <Link className="nav-link" to="/SignUp">
-                  SignUp
+                    SignUp
                 </Link>
               </li>
               <li className="nav-item">
-                <AuthState/>
+                <AuthState />
+              </li>
               </li>
             </ul>
           </div>

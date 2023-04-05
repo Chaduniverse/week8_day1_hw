@@ -4,11 +4,13 @@ import Nav from './components/Nav';
 import Pokemon from './views/Pokemon';
 import SignIn from './views/SignIn';
 import SignUp from './views/Signup';
+
   
 import {Routes, Route, BrowserRouter} from 'react-router-dom'
 
 
 import React, { Component } from 'react'
+import Pricing from './views/Pricing';
 
 export default class App extends Component {
   constructor(){
@@ -41,6 +43,7 @@ addOne = ()=> {
           <Route path='/pokemon' element={<Pokemon/>}/>
           <Route path='/SignIn' element= {<SignIn/>}/>
           <Route path='/SignUp' element = {<SignUp/>}/>
+          <Route path='/Pricing' element = {<Pricing/>}/>
         
         </Routes>
       </div>

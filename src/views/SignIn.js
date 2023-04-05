@@ -14,6 +14,9 @@ import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { auth } from '../Firebase';
 import { signInWithEmailAndPassword } from "firebase/auth";
+import { useNavigate } from 'react-router-dom';  
+
+
 
 
 function Copyright(props) {
@@ -32,6 +35,7 @@ function Copyright(props) {
 const theme = createTheme();
 
 export default function SignIn() {
+  const navigate = useNavigate()
   const [ email, setEmail] = useState('')
   const [ password, setPassword ] = useState('')
   const handleSubmit = (event) => {
@@ -43,6 +47,7 @@ export default function SignIn() {
     });
     signInWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
+        navigate('/')
         // Signed in
         const user = userCredential.user;
         console.log(console);

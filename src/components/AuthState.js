@@ -2,11 +2,13 @@ import {useState, useEffect} from 'react';
 import { auth } from '../Firebase';
 import { onAuthStateChanged, signOut } from 'firebase/auth';
 import Button from '@mui/material/Button';
+import { useNavigate } from 'react-router-dom';
+
 
 
 export default function AuthState() {
     const [authUser, setAuthUser] = useState('')
-
+    const navigate = useNavigate()
     useEffect(() => {
         onAuthStateChanged(auth, (user) => {
           if (user) {
@@ -21,6 +23,7 @@ export default function AuthState() {
 
     const HandleSignOut = () => {
         signOut(auth).then(() => {
+            navigate('/SignIn')
             // Sign-out successful.
           }).catch((error) => {
             // An error happened.
