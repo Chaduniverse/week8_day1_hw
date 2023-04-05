@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom'
 import AuthState from './AuthState'
 
 
+
+
 export default class Nav extends Component {
   render() {
     return (
@@ -24,38 +26,35 @@ export default class Nav extends Component {
           </button>
           <div className="collapse navbar-collapse" id="navbarNav">
             <ul className="navbar-nav">
-              <li className="nav-item active">
-                <Link className="nav-link" to="/">
-                  Home
-                </Link>
-              </li>
+              
+              
               <li className="nav-item">
                 <Link className="nav-link" to="/pokemon">
                   Pokemon
                 </Link>
               <li className="nav-item">
-                <Link className="nav-link" to="/Pricing">
+                  <Link className="nav-link" to="/Pricing">
                     Pricing
-                </Link>
+                  </Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="/SignIn">
+                  <Link className="nav-link" to="/SignIn">
                     SignIn
-                </Link>
+                  </Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="/SignUp">
+                  <Link className="nav-link" to="/SignUp">
                     SignUp
-                </Link>
+                  </Link>
               </li>
               <li className="nav-item">
-                <AuthState />
+                  <AuthState />
               </li>
               </li>
             </ul>
           </div>
         </nav>
       </div>
-    );
+    )
   }
 }

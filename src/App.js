@@ -4,6 +4,7 @@ import Nav from './components/Nav';
 import Pokemon from './views/Pokemon';
 import SignIn from './views/SignIn';
 import SignUp from './views/Signup';
+import './assets/css/style.css'
 
   
 import {Routes, Route, BrowserRouter} from 'react-router-dom'
